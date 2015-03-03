@@ -1,0 +1,54 @@
+%doge {
+	font-size: 3em;
+	top:150px;
+	left: 200px;
+}
+
+#rainbow-doge {
+	@include transition(opacity, 2s);
+	position: absolute;
+	z-index:5;
+	opacity: 1;
+
+    &.doge-saying {
+		opacity: 0;
+	}
+
+	&.doge0, &.doge1 {
+		@extend %doge;
+		color: $orange;
+	}
+
+	&.doge2 {
+		@extend %doge;
+		top: 250px;
+		left:450px;
+	}
+
+	&.doge3 {
+		@extend %doge;
+		top: 175px;
+		left: 300px;
+		color: $lightblue;
+	}
+
+	&.doge4 {
+		@extend %doge;
+		top: 100px;
+		left: 275px;
+	}
+
+	&.doge5 {
+		@extend %doge;
+		top: 400px;
+		left: 675px;
+	}
+
+	&.doge6 {
+		@extend %doge;
+		top: 300px;
+		left: 375px;
+	}
+}
+
+

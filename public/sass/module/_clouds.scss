@@ -1,0 +1,80 @@
+$cScale1: 0.7;
+$cScale2: 0.9;
+$cOpacity1: 0.7;
+$cOpacity2: 0.9;
+$cOpacity3: 0.3;
+%normal {
+	@include animate(movecloudsleft, 15s, linear, infinite);
+}
+
+%reverse {
+	@include animate(movecloudsright, 25s, linear, infinite);
+}
+
+.clouds__cloud {
+	@extend %normal;
+	@include cloud(370px, 120px, $alabaster, 160px, 140px, -85px, 40px);
+	top: 80px;
+	left: 100px;
+	background: $alabaster;
+	opacity: $cOpacity3;
+}
+
+.clouds__cloud2--reverse {
+	@extend %reverse;
+	@include cloud(370px, 120px, $white, 160px, 140px, -85px, 40px);
+	@include scale($cScale2);
+	top: 110px;
+	left: 20px;
+}
+
+.clouds__cloud3 {
+	@extend %normal;
+	@include cloud(370px, 120px, $white, 160px, 140px, -85px, 40px);
+	@include scale($cScale1);
+	top: 150px;
+	left: -100px;
+	opacity: $cOpacity2;
+}
+
+.clouds__cloud4--reverse {
+	@extend %reverse;
+	@include cloud(270px, 110px, $white, 160px, 140px, -85px, 40px);
+	@include scale($cScale2);
+	top: -20px;
+	left: 620px;
+}
+
+.clouds__cloud5 {
+	@extend %normal;
+	@include cloud(270px, 110px, $white, 160px, 140px, -85px, 40px);
+	@include scale($cScale2);
+	top: -270px;
+	left: -220px;
+}
+
+.clouds__cloud6--reverse {
+	@extend %reverse;
+	@include cloud(370px, 110px, $white, 160px, 140px, -85px, 40px);
+	top: -470px;
+	left: -320px;
+}
+
+//Keyframes for animation
+@-webkit-keyframes movecloudsleft {
+	0% {margin-left: 2000px;}
+	100% {margin-left: -2000px;}
+}
+@-webkit-keyframes movecloudsright {
+	0% {margin-left: -2000px;}
+	100% {margin-left: 2000px;}
+}
+
+@-moz-keyframes movecloudsleft {
+	0% {margin-left: 2000px;}
+	100% {margin-left: -2000px;}
+}
+@-moz-keyframes movecloudsright {
+	0% {margin-left: -2000px;}
+	100% {margin-left: 2000px;}
+}

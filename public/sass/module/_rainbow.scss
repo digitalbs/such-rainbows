@@ -1,0 +1,24 @@
+.rainbow-header {
+	width: 100%;
+	overflow: hidden;
+	padding: 1em 2em;
+	position: fixed;
+	z-index: 11;
+	background: $transparentBlack;
+	color: $white;
+	box-shadow: 0 0 10px $black;
+}
+
+.rainbow-header__logo {
+	float: left;
+}
+
+.rainbow-header__scoreboard {
+	float: right;
+	margin-right: 4em;
+}
+
+#rainbow-canvas {
+	position: relative;
+	z-index: 10;
+}

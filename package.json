@@ -1,0 +1,31 @@
+{
+  "name": "such-rainbows",
+  "version": "0.1.0",
+  "description": "Rainbow Challenge. Building rainbows is magic.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbs/such-rainbows"
+  },
+  "keywords": [
+    "Rainbows"
+  ],
+  "author": "Brian Schneider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalbs/such-rainbows/issues"
+  },
+  "homepage": "https://github.com/digitalbs/such-rainbows",
+  "dependencies": {
+    "hapi": "^8.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-open": "^0.3.2",
+    "gulp-sass": "^1.3.3",
+    "gulp-shell": "^0.3.0"
+  }
+}

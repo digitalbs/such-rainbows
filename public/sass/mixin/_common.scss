@@ -1,0 +1,29 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin animate($animation, $timing, $style, $loop) {
+	-webkit-animation: $animation $timing $style $loop;
+	-moz-animation: $animation $timing $style $loop;
+	animation: $animation $timing $style $loop;
+}
+
+@mixin scale($ratio) {
+	-webkit-transform: scale($ratio);
+	-moz-transform: scale($ratio);
+	transform: scale($ratio);
+}
+
+@mixin transition($type, $timing) {
+	-webkit-transition: $type $timing;
+	-moz-transition: $type $timing;
+    transition: $type $timing;
+}

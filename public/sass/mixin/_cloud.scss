@@ -1,0 +1,31 @@
+$subcloudRadius: 100px;
+$cloudRadius: 200px;
+
+@mixin cloud($width, $height, $color, $baWidth, $baHeight, $vertical, $horizontal) {
+	@include border-radius($cloudRadius);
+	position: relative;
+	width: $width;
+	height: $height;
+	background: $color;
+
+	&:before, &:after {
+		@include border-radius($subcloudRadius);
+		@include rotate(30deg);
+		content: '';
+		position: absolute;
+		background: $color;
+		width: $baWidth;
+		height: $baHeight;
+		position: absolute;
+		top: $vertical;
+		left: $horizontal;
+	}
+
+	&:after {
+		width: $baWidth + 10px;
+		height: $baHeight - 10px;
+		top: $vertical + 5px;
+		left: auto;
+		right: $horizontal + 25px;
+	}
+}
