@@ -12,4 +12,5 @@ npm install
 to setup dependencies for the project. Then, all you need to run is:
 ```
 gulp
+
 ```
